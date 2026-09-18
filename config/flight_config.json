@@ -1,0 +1,16 @@
+{
+  "controller": "pid",
+  "scenario": "controlado",
+  "setpoint_vgx": 30.0,
+  "mission_duration_s": 8.0,
+  "sampling_rate_hz": 10.0,
+  "pid_gains": {
+    "kp": 1.2,
+    "ki": 0.15,
+    "kd": 0.05
+  },
+  "safety_limits": {
+    "battery_min_pct": 15.0,
+    "telemetry_timeout_s": 2.0
+  }
+}

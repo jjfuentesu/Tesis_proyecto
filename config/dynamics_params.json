@@ -1,0 +1,8 @@
+{
+  "K": 1.2,
+  "L": 0.2,
+  "tau": 0.8,
+  "identified_on": "2025-01-01",
+  "goodness_of_fit_r2": 0.94,
+  "identification_signals": ["step", "sine_sweep"]
+}

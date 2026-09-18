@@ -1,0 +1,37 @@
+{
+  "inputs": {
+    "error": {"universe": [-1.0, 1.0], "terms": ["NB", "NS", "Z", "PS", "PB"]},
+    "delta_error": {"universe": [-1.0, 1.0], "terms": ["NB", "NS", "Z", "PS", "PB"]}
+  },
+  "outputs": {
+    "delta_kp": {"universe": [-1.0, 1.0], "terms": ["NB", "NS", "Z", "PS", "PB"]},
+    "delta_ki": {"universe": [-1.0, 1.0], "terms": ["NB", "NS", "Z", "PS", "PB"]},
+    "delta_kd": {"universe": [-1.0, 1.0], "terms": ["NB", "NS", "Z", "PS", "PB"]}
+  },
+  "membership_function_type": "triangular",
+  "defuzzification_method": "centroid",
+  "output_scaling_pct": 0.25,
+  "rules": {
+    "delta_kp": [
+      ["PB", "PB", "PM", "PS", "Z"],
+      ["PB", "PM", "PS", "Z", "NS"],
+      ["PM", "PS", "Z", "NS", "NM"],
+      ["PS", "Z", "NS", "NM", "NB"],
+      ["Z", "NS", "NM", "NB", "NB"]
+    ],
+    "delta_ki": [
+      ["NB", "NB", "NM", "NS", "Z"],
+      ["NB", "NM", "NS", "Z", "PS"],
+      ["NM", "NS", "Z", "PS", "PM"],
+      ["NS", "Z", "PS", "PM", "PB"],
+      ["Z", "PS", "PM", "PB", "PB"]
+    ],
+    "delta_kd": [
+      ["PS", "PS", "Z", "NS", "NS"],
+      ["PM", "PS", "Z", "NS", "NM"],
+      ["PB", "PM", "Z", "NM", "NB"],
+      ["PM", "PS", "Z", "NS", "NM"],
+      ["PS", "PS", "Z", "NS", "NS"]
+    ]
+  }
+}
